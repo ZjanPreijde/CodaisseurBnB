@@ -1,0 +1,34 @@
+<h1>Welcome to CodaisseurBNB</h1>
+<p>Here you can find rooms to rent for a great holiday!</p>
+<div>
+  <h4>We have several room types :</h4>
+  <ul>
+    <% @room_types.count.each do |type, count| %>
+    <li> Of type <%= type %>, we have <%= count %> rooms</li>
+    <% end %>
+  </ul>
+</div>
+<div>
+  <h4>All rooms</h4>
+  <ul>
+    <% @rooms.each do |room| %>
+    <li> <%= room.room_type %> <%= room.price %> </li>
+    <% end %>
+  </ul>
+</div>
+<div>
+  <h4>All rooms alphabetical</h4>
+  <ul>
+    <% @rooms_by_rtype.each do |room| %>
+    <li> <%= room.room_type %> <%= room.price %> </li>
+    <% end %>
+  </ul>
+</div>
+<div>
+  <h4>All rooms price ascending</h4>
+  <ul>
+    <% @rooms_by_price.each do |room| %>
+    <li> <%= room.room_type %> <%= room.price %> </li>
+    <% end %>
+  </ul>
+</div>
